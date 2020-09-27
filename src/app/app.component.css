@@ -1,0 +1,21 @@
+p {
+  font-family: Lato;
+}
+form div{
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+form input, select{
+  margin-top: 8px;
+}
+
+.resultado{
+  margin-top: 30px;
+}
+
+.resultado span{
+  background-color: #dadada;
+  padding: 10px 20px;
+}

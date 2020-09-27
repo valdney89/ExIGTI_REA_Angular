@@ -1,0 +1,32 @@
+<form>
+  <div>
+    <label>Escolha a operação</label>
+    <select #operacao (change)="fazerOperacao(num1.value, num2.value, operacao.value)">
+      <option value="somar">Somar</option>
+      <option value="subtrair">Subtrair</option>
+      <option value="dividir">Dividir</option>
+      <option value="multiplicar">Multiplicar</option>
+    </select>
+  </div>
+  <div>
+    <label for="num1">Número 01</label>
+    <input 
+      autofocus 
+      #num1 
+      type="number" 
+      placeholder="Informe o primeiro número"
+      (keyup)="fazerOperacao(num1.value, num2.value, operacao.value)"
+    />
+  </div>
+  <div>
+    <label for="num2">Número 02</label>
+    <input 
+      #num2 
+      type="number" 
+      placeholder="Informe o segundo número"
+      (keyup)="fazerOperacao(num1.value, num2.value, operacao.value)"
+    />
+  </div>
+</form>
+
+<div class="resultado">Resultado: <span>{{resultado}}</span></div>
